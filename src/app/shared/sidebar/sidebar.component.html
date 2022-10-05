@@ -1,0 +1,16 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+    <h3 class="text-light">Gifs-App</h3>
+
+    <!-- Linea separadora -->
+    <hr class="text-white">
+
+    <div class="list-group list-reset">
+        <!-- *ngFor recorre mi arreglo y me los muestra en el sidebar como una lista agrupada -->
+        <a *ngFor="let item of historial" (click)="buscar(item)" href="#"
+            class="list-group-item list-group-item-action">
+            <!-- El pipe titlecase capitaliza el valor -->
+            {{item |titlecase}}
+        </a>
+    </div>
+</div>
+<!-- Fin del Sidebar -->
